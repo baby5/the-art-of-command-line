@@ -6,17 +6,22 @@
 
 *Note: I'm looking for a new (and potentially paid) lead author to help expand this to a more comprehensive Guide. While it's very popoular, it could be both deeper and more helpful. If you like to write and are close to being an expert on this material and willing to consider helping, please drop me a note at josh (0x40) holloway.com. –[jlevy](https://github.com/jlevy), [Holloway](https://www.holloway.com)*
 
-- [Meta](#meta)
-- [Basics](#basics)
-- [Everyday use](#everyday-use)
-- [Processing files and data](#processing-files-and-data)
-- [System debugging](#system-debugging)
-- [One-liners](#one-liners)
-- [Obscure but useful](#obscure-but-useful)
-- [macOS only](#macos-only)
-- [Windows only](#windows-only)
-- [More resources](#more-resources)
-- [Disclaimer](#disclaimer)
+- [The Art of Command Line](#The-Art-of-Command-Line)
+  - [Meta](#Meta)
+  - [Basics](#Basics)
+  - [Everyday use](#Everyday-use)
+  - [Processing files and data](#Processing-files-and-data)
+  - [System debugging](#System-debugging)
+  - [One-liners](#One-liners)
+  - [Obscure but useful](#Obscure-but-useful)
+  - [macOS only](#macOS-only)
+  - [Windows only](#Windows-only)
+    - [Ways to obtain Unix tools under Windows](#Ways-to-obtain-Unix-tools-under-Windows)
+    - [Useful Windows command-line tools](#Useful-Windows-command-line-tools)
+    - [Cygwin tips and tricks](#Cygwin-tips-and-tricks)
+  - [More resources](#More-resources)
+  - [Disclaimer](#Disclaimer)
+  - [License](#License)
 
 
 ![curl -s 'https://raw.githubusercontent.com/jlevy/the-art-of-command-line/master/README.md' | egrep -o '`\w+`' | tr -d '`' | cowsay -W50](cowsay.png)
@@ -50,12 +55,20 @@ Notes:
 
 - Learn basic Bash. Actually, type `man bash` and at least skim the whole thing; it's pretty easy to follow and not that long. Alternate shells can be nice, but Bash is powerful and always available (learning *only* zsh, fish, etc., while tempting on your own laptop, restricts you in many situations, such as using existing servers).
 
+> 1. Bash is a Unix Shell and command language from GNU Project
+
 - Learn at least one text-based editor well. The `nano` editor is one of the simplest for basic editing (opening, editing, saving, searching). However, for the power user in a text terminal, there is no substitute for Vim (`vi`), the hard-to-learn but venerable, fast, and full-featured editor. Many people also use the classic Emacs, particularly for larger editing tasks. (Of course, any modern software developer working on an extensive project is unlikely to use only a pure text-based editor and should also be familiar with modern graphical IDEs and tools.)
 
 - Finding documentation:
   - Know how to read official documentation with `man` (for the inquisitive, `man man` lists the section numbers, e.g. 1 is "regular" commands, 5 is files/conventions, and 8 are for administration). Find man pages with `apropos`.
   - Know that some commands are not executables, but Bash builtins, and that you can get help on them with `help` and `help -d`. You can find out whether a command is an executable, shell builtin or an alias by using `type command`.
   - `curl cheat.sh/command` will give a brief "cheat sheet" with common examples of how to use a shell command.
+
+> 1. `man` is system's manual page
+> 2. `apropos` to search man page
+> 3. `help` display infomation about **bulitin** commands
+> 4. `type` dispaly infomation about command type
+> 5. **cheat.sh** is a web site provides command examples
 
 - Learn about redirection of output and input using `>` and `<` and pipes using `|`. Know `>` overwrites the output file and `>>` appends. Learn about stdout and stderr.
 
